@@ -45,7 +45,13 @@ Persistent Volume is created by cluster administrator and provisioned. It will b
 Pod developer will not have any underlying knowledge on the volume.
 ```
 
+## What are access mode and their meaning?
 
+```
+RWO—ReadWriteOnce—Only a single node can mount the volume for reading and writing.
+ROX—ReadOnlyMany—Multiple nodes can mount the volume for reading.
+RWX—ReadWriteMany—Multiple nodes can mount the volume for both reading and writing.
+```
 
 
 
