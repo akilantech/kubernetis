@@ -53,10 +53,14 @@ ROX—ReadOnlyMany—Multiple nodes can mount the volume for reading.
 RWX—ReadWriteMany—Multiple nodes can mount the volume for both reading and writing.
 ```
 
+## Create a busybox pod with 'sleep 3600' as arguments. Copy '/etc/passwd' from the pod to your local folder
 
-
-
-
+```
+kubectl run busybox --image=busybox --restart=Never -- sleep 3600
+kubectl cp busybox:etc/passwd ./passwd # kubectl cp command
+# previous command might report an error, feel free to ignore it since copy command works
+cat passwd
+```
 
 
 
