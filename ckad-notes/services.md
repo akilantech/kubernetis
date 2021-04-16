@@ -20,8 +20,21 @@ Name:                     nginx-ext
 Annotations:              <none>
 Selector:                 run=nginx
 
+```
 
+## What is NodePort service and how it works?
 
 ```
+NodePort service helps to expose the pods or deployments to external world. It uses identifies resource by the label.
+Note that expose the port only not the ip address.
+
+k expose pod my-pod1 --type NodePort --dry-run=client --port 80 --target-port 80
+Pods port is 80 and NodePort is 80
+
+You can add external port in the template file as nodeport.
+
+```
+
+
 
 
